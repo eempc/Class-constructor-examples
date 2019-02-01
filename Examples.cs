@@ -50,7 +50,8 @@ namespace ConsoleApp3 {
 
     public class Box {
         double length, breadth, height;
-
+        
+        // Constructors are not mandatory
         public Box(double length, double breadth, double height) {
             this.length = length;
             this.breadth = breadth;
