@@ -37,10 +37,10 @@ namespace ConsoleApp3 {
             return breed;
         }
 
-        public string changeName(string newName) {
+        public void changeName(string newName) {
             Console.WriteLine("Name change request: " + newName);
             name = newName;
-            return name;
+            //return name;
         }
 
         public string verboseDescription() {
