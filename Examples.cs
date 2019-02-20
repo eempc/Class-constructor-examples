@@ -15,6 +15,8 @@ namespace ConsoleApp3 {
         }
     }
 
+    // Classes ought to be added as a new .cs file by right clicking the project in Solution Explorer and choosing new class
+    
     public class Cat {
         string name, breed;
         int age;
