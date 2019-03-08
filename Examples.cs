@@ -9,7 +9,7 @@ namespace ClassPractice {
             this.length = length;
             this.breadth = breadth;
             this.height = height;
-            this.name = "Box: " + length.ToString() + "x" + breadth.ToString() + "x" + breadth.ToString(); // This name is generated at construction, it won't be changed unless I can autodetect changes to box dimensions, or manual change
+            this.name = "Box: " + length.ToString() + "x" + breadth.ToString() + "x" + width.ToString(); // This name is generated at construction, it won't be changed unless I can autodetect changes to box dimensions, or manual change
         }
 
         // Default value box of 2 if unspecified
@@ -17,7 +17,7 @@ namespace ClassPractice {
             length = 2;
             breadth = 2;
             height = 2;
-            name = "Box: " + length.ToString() + "x" + breadth.ToString() + "x" + breadth.ToString();
+            name = "Box: " + length.ToString() + "x" + breadth.ToString() + "x" + width.ToString();
         }
 
         public double getVolume() {
