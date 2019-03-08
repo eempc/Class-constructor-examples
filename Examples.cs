@@ -51,22 +51,12 @@ namespace ConsoleApp3 {
     }
 
     public class Box {
-        double length, breadth, height;
-        
-        // Constructors are not mandatory
-        public Box(double length, double breadth, double height) {
-            this.length = length;
-            this.breadth = breadth;
-            this.height = height;
-        }
-
-        // These get/sets must be the capitalised version of the initial initialisations
         public double Length { get; set; }
         public double Breadth { get; set; }
         public double Height { get; set; }
 
         public double getVolume() {
-            return length * breadth * height;
+            return Length * Breadth * Height;
         }
     }
 }
