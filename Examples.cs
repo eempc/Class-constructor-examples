@@ -1,62 +1,40 @@
-using System;
+namespace ClassPractice {
+    class Box2 {
+        // Double constructor method
+        public double length, breadth, height;
+        public string name;
 
-namespace ConsoleApp3 {
-    class Program {
-        static void Main(string[] args) {
-            Cat cat1 = new Cat("Mittens", 3, "tabby");
-            string description = cat1.verboseDescription();
-            Console.WriteLine(description);
-            cat1.changeName("Waffles");
-            Console.WriteLine(cat1.getName());
+        // If you use the constructor parameters e.g. Box2 myBox2 = new Box2(3,3,3);
+        public Box2(double length, double breadth, double height) {
+            this.length = length;
+            this.breadth = breadth;
+            this.height = height;
+            this.name = "Box: " + length.ToString() + "x" + breadth.ToString() + "x" + breadth.ToString(); // This name is generated at construction, it won't be changed unless I can autodetect changes to box dimensions, or manual change
+        }
 
-            Box box1 = new Box(5.00, 3.5, 2.5);
-            Console.WriteLine(box1.getVolume());
-            Console.ReadLine();
+        // Default value box of 2 if unspecified
+        public Box2() {
+            length = 2;
+            breadth = 2;
+            height = 2;
+            name = "Box: " + length.ToString() + "x" + breadth.ToString() + "x" + breadth.ToString();
+        }
+
+        public double getVolume() {
+            return length * breadth * height;
         }
     }
-
-    // Classes ought to be added as a new .cs file by right clicking the project in Solution Explorer and choosing new class
     
-    public class Cat {
-        string name, breed;
-        int age;
+    class Box {
+        // Non-constructor method
 
-        public Cat(string name, int age, string breed) {
-            this.name = name;
-            this.age = age;
-            this.breed = breed;
-        }
-
-        public string getName() {
-            return name; 
-        }
-
-        public int getAge() {
-            return age;
-        }
-
-        public string getBreed() {
-            return breed;
-        }
-
-        public void changeName(string newName) {
-            Console.WriteLine("Name change request: " + newName);
-            name = newName;
-            //return name;
-        }
-
-        public string verboseDescription() {
-            return String.Format("{0} is a {1}-year old {2} cat.", name, age, breed);
-        }
-    }
-
-    public class Box {
         public double Length { get; set; }
         public double Breadth { get; set; }
         public double Height { get; set; }
 
-        public double getVolume() {
-            return Length * Breadth * Height;
+        public double GetVolume() {
+        return Length * Breadth * Height;
         }
     }
+    
 }
