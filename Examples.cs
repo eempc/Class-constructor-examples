@@ -37,7 +37,7 @@ namespace ClassPractice {
         }
     }
     
-        class Box3 {
+    class Box3 {
         public double Length { get; set; }
         public double Breadth { get; set; }
         public double Width { get; set; }
@@ -51,6 +51,5 @@ namespace ClassPractice {
         public double getVolume() {
             return Length * Breadth * Width;
         }
-    }
-    
+    }   
 }
