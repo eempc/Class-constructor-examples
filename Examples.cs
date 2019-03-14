@@ -33,7 +33,23 @@ namespace ClassPractice {
         public double Height { get; set; }
 
         public double GetVolume() {
-        return Length * Breadth * Height;
+            return Length * Breadth * Height;
+        }
+    }
+    
+        class Box3 {
+        public double Length { get; set; }
+        public double Breadth { get; set; }
+        public double Width { get; set; }
+
+        public Box3() {
+            Length = 3;
+            Breadth = 3;
+            Width = 3;
+        }
+
+        public double getVolume() {
+            return Length * Breadth * Width;
         }
     }
     
