@@ -1,8 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp3 {
     class Program {
@@ -34,9 +31,11 @@ namespace ConsoleApp3 {
         }
 
         public abstract string Speak();
+
     }
 
-    public class Cat : Mammal, ISpeaks {
+    // If the abstract base class Mammal implements ISpeaks, then the derived classes do not need to inherit ISpeaks as with the Cat
+    public class Cat : Mammal {
         public Cat(string name) : base(name) {
             Name = name;
         }
