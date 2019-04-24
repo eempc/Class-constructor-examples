@@ -26,12 +26,14 @@ namespace ConsoleApp3 {
         string Speak();
     }
 
-    public abstract class Mammal {
+    public abstract class Mammal : ISpeaks {
         public string Name { get; set; }
         
         public Mammal(string name) {
             Name = name;
         }
+
+        public abstract string Speak();
 
     }
 
@@ -40,7 +42,7 @@ namespace ConsoleApp3 {
             Name = name;
         }
 
-        public string Speak() {
+        public override string Speak() {
             return "Meow! My name is " + Name;
         }
     }
@@ -49,7 +51,7 @@ namespace ConsoleApp3 {
         public Dog (string name) : base(name) {
             Name = name;
         }
-        public string Speak() {
+        public override string Speak() {
             return "Woof! My name is " + Name;
         }
     }
@@ -58,7 +60,7 @@ namespace ConsoleApp3 {
         public Human(string name) : base(name) {
             Name = name;
         }
-        public string Speak() {
+        public override string Speak() {
             return "Hello! My name is " + Name;
         }
     }
