@@ -1,0 +1,79 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3 {
+    class Program {
+        static void Main(string[] args) {
+            // Make a list of things that speak
+            List<ISpeaks> thingsThatSpeak = new List<ISpeaks>();
+            thingsThatSpeak.Add(new Cat("Mittens"));
+            thingsThatSpeak.Add(new Dog("Rover"));
+            thingsThatSpeak.Add(new Human("Bob"));
+            thingsThatSpeak.Add(new Robot("R2D2"));
+
+            foreach (var item in thingsThatSpeak) {
+                Console.WriteLine(item.Speak() + "\r\n");
+            }
+            Console.ReadKey();
+        }
+    }
+
+    // An interface simply defines the name of the methods, i.e. what should go into a class
+    public interface ISpeaks {
+        string Speak();
+    }
+
+    public abstract class Mammal {
+        public string Name { get; set; }
+        
+        public Mammal(string name) {
+            Name = name;
+        }
+
+    }
+
+    public class Cat : Mammal, ISpeaks {
+        public Cat(string name) : base(name) {
+            Name = name;
+        }
+
+        public string Speak() {
+            return "Meow! My name is " + Name;
+        }
+    }
+
+    public class Dog : Mammal, ISpeaks {
+        public Dog (string name) : base(name) {
+            Name = name;
+        }
+        public string Speak() {
+            return "Woof! My name is " + Name;
+        }
+    }
+
+    public class Human : Mammal, ISpeaks {
+        public Human(string name) : base(name) {
+            Name = name;
+        }
+        public string Speak() {
+            return "Hello! My name is " + Name;
+        }
+    }
+
+    public class Robot : ISpeaks {
+        public string Designation { get; set; }
+
+        public Robot (string designation) {
+            Designation = designation;
+        }
+
+        public string Speak() {
+            return "Bleep! Bloop! My name is " + Designation;
+        }
+    }
+
+
+}
