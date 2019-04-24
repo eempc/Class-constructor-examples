@@ -35,6 +35,8 @@ namespace ConsoleApp3 {
     }
 
     // If the abstract base class Mammal implements ISpeaks, then the derived classes do not need to inherit ISpeaks as with the Cat
+    // If Speak() is missing, then the Cat class is invalid
+    // Do all mammals speak though? Let's assume yes.
     public class Cat : Mammal {
         public Cat(string name) : base(name) {
             Name = name;
