@@ -34,7 +34,6 @@ namespace ConsoleApp3 {
         }
 
         public abstract string Speak();
-
     }
 
     public class Cat : Mammal, ISpeaks {
@@ -76,6 +75,4 @@ namespace ConsoleApp3 {
             return "Bleep! Bloop! My name is " + Designation;
         }
     }
-
-
 }
