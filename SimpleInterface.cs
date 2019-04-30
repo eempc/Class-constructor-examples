@@ -30,7 +30,7 @@ namespace ConsoleApp3 {
             Name = name;
         }
 
-        public abstract string Speak();
+        public abstract string Speak(); // This class requires Speak() and is abstract
 
     }
 
