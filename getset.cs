@@ -1,6 +1,27 @@
 // use { get; set; } when it's a Property with PascalCase, this allows direct mutability of the property variable
 // without { get; set; } it is a (private) variable with a "method" that sets the private variable (as is the case below with the extra validation check, or gets it via return method
 
+public class Date
+{
+    private int month = 7;  // Backing store
+
+    public int Month
+    {
+        get
+        {
+            return month;
+        }
+        set
+        {
+            if ((value > 0) && (value < 13))
+            {
+                month = value;
+            }
+        }
+    }
+}
+
+//////////////////
 class MyBaseClass
 {
     // virtual auto-implemented property. Overrides can only
