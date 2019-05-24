@@ -17,6 +17,7 @@ public class Date
             {
                 month = value;
             }
+            // else throw new ArgumentOutOfRangeException()
         }
     }
 }
