@@ -1,8 +1,8 @@
-public class ExtendedChild : Parent
+public class Derived : Base
 {
-	public ExtendedChild(Parent parent)
+	public Derived(Base base)
 	{
-		foreach (PropertyInfo property in typeof(Parent).GetProperties())
-			typeof(ExtendedChild).GetProperty(property.Name).SetValue(this, property.GetValue(parent));
+		foreach (PropertyInfo property in typeof(Base).GetProperties())
+			typeof(Derived).GetProperty(property.Name).SetValue(this, property.GetValue(base));
 	}
 }
