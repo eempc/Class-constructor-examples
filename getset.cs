@@ -1,3 +1,35 @@
+// Maybe?
+
+    public class ScoreRecord {
+        public List<double> Scores = new List<double>();
+
+        public double Sum {
+            get {
+                return Scores.Sum();
+            }
+        }
+            
+        public double High {
+            get {
+                return Scores.Max();
+            }
+        }
+        public double Low {
+            get {
+                return Scores.Min();
+            }
+        }
+        public double Average {
+            get {
+                return Scores.Average();
+            }
+        }
+
+        public void AddGrade(double score) {
+            Scores.Add(score);
+        }
+    }
+
 // use { get; set; } when it's a Property with PascalCase, this allows direct mutability of the property variable
 // without { get; set; } it is a (private) variable with a "method" that sets the private variable (as is the case below with the extra validation check, or gets it via return method
 
