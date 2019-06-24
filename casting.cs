@@ -7,4 +7,18 @@ public class Derived : Base {
 		}
 		NewProperty = newProperty;
 	}
+	
+	public Derived(Base base) {
+		foreach (PropertyInfo property in typeof(Base).GetProperties()) {
+			typeof(Derived).GetProperty(property.Name).SetValue(this, property.GetValue(base));
+		}
+	}
+	
+	public Derived(int newProperty, string oldProperty) : base(oldProperty) {
+		// etc
+	}
+	
+	public Derived() {
+		
+	}
 }
