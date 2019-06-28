@@ -1,3 +1,5 @@
+// Reference vs value types, classes vs structs
+
 public struct Vector2 {
     public double x, y;
     public Vector2(double p1, double p2) {
